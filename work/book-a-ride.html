@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Book A Ride — Laxminarayana Avula product design case study"
+    />
+    <title>Book A Ride — Laxminarayana Avula</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="book-a-ride.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="nav">
+      <a class="brand" href="../index.html" aria-label="Back to portfolio"
+        >LA<span>.</span></a
+      >
+      <nav class="navlinks" aria-label="Case study navigation">
+        <a href="../index.html#work">Work</a
+        ><a href="../index.html#about">About</a
+        ><a href="../index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div>
+              <div class="kicker">04 / MOBILITY · PRODUCT DESIGN · BOOKING</div>
+              <h1>Book A Ride</h1>
+              <p class="lede">
+                Designing a premium chauffeur-booking experience that makes trip
+                planning, vehicle selection and booking feel clear across web
+                and mobile.
+              </p>
+            </div>
+            <dl class="meta">
+              <div>
+                <dt>Role</dt>
+                <dd>Product Designer</dd>
+              </div>
+              <div>
+                <dt>Scope</dt>
+                <dd>Web + mobile booking experience</dd>
+              </div>
+              <div>
+                <dt>Focus</dt>
+                <dd>Airport · City-to-city · Hourly hire</dd>
+              </div>
+              <div>
+                <dt>Core flow</dt>
+                <dd>Trip details → Cars → Selection</dd>
+              </div>
+            </dl>
+          </div>
+          <figure class="hero-img">
+            <img
+              src="assets/book-a-ride-home.png"
+              alt="Book A Ride desktop home experience"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">01</div>
+            <h2>The product question</h2>
+            <p class="section-copy">
+              A ride-booking product has to make several decisions legible at
+              once: where the journey starts, where it ends, when it happens,
+              what kind of service is needed, which vehicle fits, and what the
+              user will pay.
+            </p>
+          </div>
+          <div class="thesis" style="margin-top: 58px">
+            <h2>
+              Booking should feel like a <em>single journey</em>, not a sequence
+              of disconnected forms.
+            </h2>
+            <div class="section-copy">
+              <p>
+                The supplied product screens show a multi-service experience
+                spanning airport transfers, city-to-city travel and hourly
+                chauffeur hire. The design therefore needs a shared booking
+                model while still allowing each service to communicate its own
+                context.
+              </p>
+            </div>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <b>01 / INPUT</b>
+              <h3>Trip intent</h3>
+              <p>
+                Capture the journey type, locations, date and time without
+                making the user reconstruct the request later.
+              </p>
+            </article>
+            <article class="card">
+              <b>02 / OPTIONS</b>
+              <h3>Vehicle choice</h3>
+              <p>
+                Present vehicle class, capacity and price as comparable decision
+                factors.
+              </p>
+            </article>
+            <article class="card">
+              <b>03 / CONFIDENCE</b>
+              <h3>Service detail</h3>
+              <p>
+                Make inclusions and service expectations visible before
+                selection.
+              </p>
+            </article>
+            <article class="card">
+              <b>04 / CONTINUITY</b>
+              <h3>Responsive flow</h3>
+              <p>
+                Carry the same mental model from desktop booking into the mobile
+                experience.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">02</div>
+            <h2>One product, multiple trip intents</h2>
+            <p class="section-copy">
+              The experience supports distinct service models rather than
+              forcing every journey into one generic booking form.
+            </p>
+          </div>
+          <div class="flow">
+            <article class="step">
+              <div class="n">01 / AIRPORT</div>
+              <h3>Airport transfer</h3>
+              <p>
+                Pickup, drop-off, flight-oriented context and vehicle selection.
+              </p>
+            </article>
+            <article class="step">
+              <div class="n">02 / CITY</div>
+              <h3>City-to-city</h3>
+              <p>
+                Longer-distance travel with route and vehicle considerations.
+              </p>
+            </article>
+            <article class="step">
+              <div class="n">03 / HOURLY</div>
+              <h3>Hourly hire</h3>
+              <p>Duration becomes the primary booking variable.</p>
+            </article>
+            <article class="step">
+              <div class="n">04 / VEHICLE</div>
+              <h3>Compare</h3>
+              <p>
+                Vehicle class, capacity, amenities and price support selection.
+              </p>
+            </article>
+            <article class="step">
+              <div class="n">05 / BOOK</div>
+              <h3>Commit</h3>
+              <p>Move forward with a clear selected service and journey.</p>
+            </article>
+          </div>
+          <div class="pair">
+            <figure>
+              <img
+                src="assets/book-a-ride-airport-transfers.png"
+                alt="Book A Ride airport transfer page"
+              />
+              <figcaption>Airport transfer service surface</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="assets/book-a-ride-city-to-city.png"
+                alt="Book A Ride city-to-city page"
+              />
+              <figcaption>City-to-city service surface</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">03</div>
+            <h2>The booking model</h2>
+            <p class="section-copy">
+              The interface establishes a consistent sequence from trip
+              definition to vehicle selection.
+            </p>
+          </div>
+          <div class="flow">
+            <article class="step">
+              <div class="n">01</div>
+              <h3>Define</h3>
+              <p>Pickup, destination, date and time.</p>
+            </article>
+            <article class="step">
+              <div class="n">02</div>
+              <h3>Filter</h3>
+              <p>Trip and vehicle requirements narrow the set.</p>
+            </article>
+            <article class="step">
+              <div class="n">03</div>
+              <h3>Compare</h3>
+              <p>Vehicle type, capacity and price become scannable.</p>
+            </article>
+            <article class="step">
+              <div class="n">04</div>
+              <h3>Select</h3>
+              <p>The primary action stays close to the price.</p>
+            </article>
+            <article class="step">
+              <div class="n">05</div>
+              <h3>Continue</h3>
+              <p>The chosen service carries forward into booking.</p>
+            </article>
+          </div>
+          <figure class="figure">
+            <img
+              src="assets/book-a-ride-results.png"
+              alt="Book A Ride desktop car results showing filters, vehicle options and prices"
+            />
+            <figcaption>
+              <span>AUTHENTIC PRODUCT SCREEN</span
+              ><span>Vehicle results / desktop</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">04</div>
+            <h2>Design decisions</h2>
+            <p class="section-copy">
+              The important design work is not only the visual layer. It is how
+              the interface makes complex booking choices easier to scan and act
+              on.
+            </p>
+          </div>
+          <div class="decision-list">
+            <article class="decision">
+              <div class="num">01</div>
+              <h3>Put trip context above the results.</h3>
+              <div>
+                <p>
+                  The selected pickup, destination, date and time remain visible
+                  before the user evaluates vehicles.
+                </p>
+                <p class="result">
+                  <strong>UI consequence:</strong> The results page begins with
+                  journey context, then moves into filters and vehicle options.
+                </p>
+              </div>
+            </article>
+            <article class="decision">
+              <div class="num">02</div>
+              <h3>Make vehicle comparison scannable.</h3>
+              <div>
+                <p>
+                  Users need to compare class, passenger capacity, luggage
+                  capacity and price without opening every option.
+                </p>
+                <p class="result">
+                  <strong>UI consequence:</strong> Each vehicle row presents the
+                  decision factors together with a clear Select action.
+                </p>
+              </div>
+            </article>
+            <article class="decision">
+              <div class="num">03</div>
+              <h3>Keep the primary action close to the decision.</h3>
+              <div>
+                <p>
+                  Selection is the moment where the user commits to a vehicle,
+                  so the action should not compete with secondary information.
+                </p>
+                <p class="result">
+                  <strong>UI consequence:</strong> Price and Select are grouped
+                  on the right side of each result.
+                </p>
+              </div>
+            </article>
+            <article class="decision">
+              <div class="num">04</div>
+              <h3>
+                Let service type change the context, not the product language.
+              </h3>
+              <div>
+                <p>
+                  Airport transfer, city-to-city and hourly hire have different
+                  requirements, but the product should still feel like one
+                  booking system.
+                </p>
+                <p class="result">
+                  <strong>UI consequence:</strong> Distinct service pages use a
+                  consistent hierarchy and visual language.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">05</div>
+            <h2>Mobile keeps the same mental model</h2>
+            <p class="section-copy">
+              The mobile screens show the booking experience compressed into a
+              smaller interaction space without changing the core sequence.
+            </p>
+          </div>
+          <div class="pair">
+            <figure>
+              <img
+                src="assets/book-a-ride-home-mobile.png"
+                alt="Book A Ride mobile home and trip search experience"
+              />
+              <figcaption>Mobile / trip definition</figcaption>
+            </figure>
+            <figure>
+              <img
+                src="assets/book-a-ride-results-mobile.png"
+                alt="Book A Ride mobile vehicle results"
+              />
+              <figcaption>Mobile / vehicle selection</figcaption>
+            </figure>
+          </div>
+          <div class="quote">
+            <p>
+              Responsive design here is not simply shrinking the desktop layout.
+              The hierarchy is preserved while the interaction model becomes
+              touch-first.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">06</div>
+            <h2>Service-specific experiences</h2>
+            <p class="section-copy">
+              The product can communicate a different booking intent while
+              maintaining a recognizable Book A Ride system.
+            </p>
+          </div>
+          <figure class="figure">
+            <img
+              src="assets/book-a-ride-hourly-hire.png"
+              alt="Book A Ride hourly chauffeur hire service page"
+            />
+            <figcaption>
+              <span>AUTHENTIC PRODUCT SCREEN</span
+              ><span>Hourly hire / service-specific experience</span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">07</div>
+            <h2>From interface to system</h2>
+            <p class="section-copy">
+              The product screens imply a reusable system: navigation, trip
+              inputs, filters, vehicle cards, pricing, capacity indicators,
+              service information and primary actions.
+            </p>
+          </div>
+          <div class="cards">
+            <article class="card">
+              <b>FOUNDATION</b>
+              <h3>Hierarchy</h3>
+              <p>
+                Consistent type scale and spacing establish clear primary and
+                secondary information.
+              </p>
+            </article>
+            <article class="card">
+              <b>COMPONENT</b>
+              <h3>Vehicle option</h3>
+              <p>
+                Image, class, capacity, pricing and selection form a repeatable
+                decision unit.
+              </p>
+            </article>
+            <article class="card">
+              <b>PATTERN</b>
+              <h3>Trip definition</h3>
+              <p>
+                Location, date and time inputs establish the booking context.
+              </p>
+            </article>
+            <article class="card">
+              <b>EXPERIENCE</b>
+              <h3>Booking journey</h3>
+              <p>
+                The system connects service discovery, trip definition and
+                vehicle selection.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="wrap">
+          <div class="section-head">
+            <div class="num">08</div>
+            <h2>Contribution & outcome</h2>
+            <p class="section-copy">
+              The supplied screens demonstrate a product designed as a connected
+              booking experience rather than a collection of isolated marketing
+              pages.
+            </p>
+          </div>
+          <div class="outcome" style="margin-top: 58px">
+            <div>
+              <h2>
+                Make the journey easier to understand before the ride begins.
+              </h2>
+              <p>
+                My design focus was on turning a multi-service chauffeur
+                experience into a clearer path from trip intent to vehicle
+                selection across desktop and mobile.
+              </p>
+            </div>
+            <div>
+              <p><strong>Design contribution</strong></p>
+              <ul>
+                <li>Trip-definition experience</li>
+                <li>Vehicle-results architecture</li>
+                <li>Airport / city / hourly service surfaces</li>
+                <li>Responsive web and mobile experience</li>
+                <li>Reusable product patterns</li>
+              </ul>
+            </div>
+          </div>
+          <div class="quote">
+            <p>
+              Good booking UX removes uncertainty at the moments when the user
+              is deciding what to book, which option fits, and what happens
+              next.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="next">
+        <div class="wrap">
+          <small>NEXT PROJECT</small>
+          <a href="../index.html#work"
+            ><h2>Explore the rest of the product work ↗</h2></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <span>© 2026 Laxminarayana Avula</span
+      ><a href="../index.html">← Back to portfolio</a>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Enquire — AI Search & Knowledge Discovery case study by Laxminarayana Avula, Senior Product Designer.">
+<meta name="theme-color" content="#07090b">
+<title>Enquire — AI Search & Knowledge Discovery | Laxminarayana Avula</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../case-studies.css">
+<style>
+/* =========================================================
+   ENQUIRE — FINAL SENIOR CASE STUDY
+   Evidence-led narrative layer. Page-scoped only.
+   ========================================================= */
+.case-page .role-block{display:grid;grid-template-columns:repeat(4,1fr);margin-top:58px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-page .role-block article{padding:25px 20px;border-right:1px solid var(--line-soft)}
+.case-page .role-block article:last-child{border-right:0}
+.case-page .role-block b{display:block;color:var(--accent);font:800 9px/1.2 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.case-page .role-block p{margin:10px 0 0;color:#d2d9dc;font:500 12px/1.6 "DM Sans",sans-serif}
+.case-page .role-note{margin:18px 0 0;color:var(--dim);font:500 10px/1.6 Manrope,sans-serif;letter-spacing:.06em}
+.case-page .complexity{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:48px;background:var(--line)}
+.case-page .complexity article{padding:26px 22px;background:var(--bg)}
+.case-page .complexity span{display:block;color:var(--accent);font:800 9px/1 Manrope,sans-serif;letter-spacing:.14em}
+.case-page .complexity h3{margin:16px 0 8px;font:600 17px/1.15 Manrope,sans-serif}
+.case-page .complexity p{margin:0;color:var(--muted);font:400 12px/1.6 "DM Sans",sans-serif}
+.case-page .decision-list{margin-top:52px;border-top:1px solid var(--line)}
+.case-page .decision-card{display:grid;grid-template-columns:64px minmax(230px,.7fr) minmax(300px,1fr);gap:28px;padding:30px 0;border-bottom:1px solid var(--line-soft)}
+.case-page .decision-card .label{color:var(--accent);font:800 9px/1.4 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.case-page .decision-card h3{margin:0;font:600 24px/1.1 Manrope,sans-serif;letter-spacing:-.04em}
+.case-page .decision-card p{margin:0;color:var(--muted);font:400 13px/1.7 "DM Sans",sans-serif}
+.case-page .decision-card p strong{color:#e8edef;font-weight:600}
+.case-page .decision-card .tradeoff{margin-top:12px;color:#dfe5e7;font-size:12px}
+.case-page .decision-card .consequence{margin-top:10px;color:#8f9ba0;font-size:11px}
+.case-page .proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:48px;background:var(--line)}
+.case-page .proof-grid article{padding:28px;background:var(--bg)}
+.case-page .proof-grid b{display:block;color:var(--accent);font:800 9px/1.2 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.case-page .proof-grid h3{margin:15px 0 9px;font:600 19px/1.15 Manrope,sans-serif}
+.case-page .proof-grid p{margin:0;color:var(--muted);font:400 12px/1.65 "DM Sans",sans-serif}
+.case-page .evidence-note{margin-top:22px;color:var(--dim);font:500 10px/1.65 Manrope,sans-serif;letter-spacing:.02em}
+.case-page .anatomy{display:grid;grid-template-columns:minmax(0,1.22fr) minmax(300px,.78fr);gap:clamp(42px,7vw,100px);align-items:center;margin-top:55px}
+.case-page .anatomy-visual{background:#090e11;border:1px solid var(--line);padding:clamp(18px,3vw,38px)}
+.case-page .anatomy-visual img{width:100%}
+.case-page .anatomy-list{border-top:1px solid var(--line)}
+.case-page .anatomy-list article{padding:21px 0;border-bottom:1px solid var(--line-soft)}
+.case-page .anatomy-list b{display:block;color:#f0f3f4;font:700 12px/1.2 Manrope,sans-serif}
+.case-page .anatomy-list span{display:block;margin-top:8px;color:var(--muted);font:400 12px/1.65 "DM Sans",sans-serif}
+.case-page .before-after{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:44px}
+.case-page .before-after article{padding:25px;border:1px solid var(--line);background:#090e11}
+.case-page .before-after b{display:block;color:var(--accent);font:800 9px/1.2 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.case-page .before-after h3{margin:13px 0 8px;font:600 20px/1.15 Manrope,sans-serif}
+.case-page .before-after p{margin:0;color:var(--muted);font:400 12px/1.65 "DM Sans",sans-serif}
+.case-page .validation-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;margin-top:50px;background:var(--line)}
+.case-page .validation-grid article{padding:30px;background:var(--bg)}
+.case-page .validation-grid b{display:block;color:var(--accent);font:800 9px/1.2 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.case-page .validation-grid h3{margin:14px 0 8px;font:600 20px/1.15 Manrope,sans-serif}
+.case-page .validation-grid p{margin:0;color:var(--muted);font:400 13px/1.7 "DM Sans",sans-serif}
+.case-page .validation-grid .iteration{margin-top:15px;color:#dfe5e7;font-size:12px}
+.case-page .ownership{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(50px,9vw,140px);align-items:start;margin-top:52px}
+.case-page .ownership h3{margin:0;font:500 clamp(38px,5vw,70px)/.93 Manrope,sans-serif;letter-spacing:-.07em}
+.case-page .ownership-list{border-top:1px solid var(--line)}
+.case-page .ownership-list article{padding:18px 0;border-bottom:1px solid var(--line-soft)}
+.case-page .ownership-list b{display:block;font:700 12px/1.3 Manrope,sans-serif}
+.case-page .ownership-list span{display:block;margin-top:6px;color:var(--muted);font:400 12px/1.6 "DM Sans",sans-serif}
+.case-page .closing{padding:clamp(110px,13vw,190px) 0}
+.case-page .closing h2{max-width:1100px;margin:0;font:500 clamp(52px,7.3vw,106px)/.88 Manrope,sans-serif;letter-spacing:-.075em}
+.case-page .closing h2 em{font-style:normal;color:#7e8a90}
+.case-page .closing p{max-width:760px;margin:38px 0 0;color:var(--muted);font:400 16px/1.8 "DM Sans",sans-serif}
+.case-page .closing .closing-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:58px;background:var(--line)}
+.case-page .closing-proof article{padding:25px;background:var(--bg)}
+.case-page .closing-proof b{display:block;color:var(--accent);font:800 9px/1.2 Manrope,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.case-page .closing-proof p{margin:10px 0 0;font-size:12px;line-height:1.6}
+.case-page .wireframe-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:52px}
+.case-page .wireframe{min-height:310px;border:1px solid var(--line);background:#090e11;padding:20px}
+.case-page .wireframe .wf-label{color:var(--accent);font:800 9px/1.2 Manrope,sans-serif;letter-spacing:.14em}
+.case-page .wireframe h3{margin:14px 0 20px;font:600 18px/1.15 Manrope,sans-serif}
+.case-page .wf-ui{height:190px;border:1px solid rgba(255,255,255,.14);background:#070a0d;padding:16px;display:flex;flex-direction:column;gap:10px}
+.case-page .wf-line{height:7px;background:rgba(255,255,255,.12);width:72%}
+.case-page .wf-line.short{width:38%}.case-page .wf-line.long{width:92%}
+.case-page .wf-box{height:42px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.025)}
+.case-page .wf-accent{height:32px;border:1px solid rgba(93,230,255,.35);background:rgba(93,230,255,.06)}
+@media(max-width:900px){
+ .case-page .role-block,.case-page .complexity{grid-template-columns:1fr 1fr}
+ .case-page .role-block article:nth-child(2),.case-page .complexity article:nth-child(2),.case-page .complexity article:nth-child(4){border-right:0}
+ .case-page .role-block article:nth-child(-n+2),.case-page .complexity article:nth-child(-n+2){border-bottom:1px solid var(--line-soft)}
+ .case-page .decision-card,.case-page .anatomy,.case-page .ownership{grid-template-columns:1fr}
+ .case-page .decision-card .label{margin-bottom:-12px}
+ .case-page .proof-grid,.case-page .closing .closing-proof{grid-template-columns:1fr}
+ .case-page .before-after,.case-page .validation-grid,.case-page .wireframe-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .case-page .role-block,.case-page .complexity{grid-template-columns:1fr}
+ .case-page .role-block article,.case-page .complexity article{border-right:0;border-bottom:1px solid var(--line-soft)}
+ .case-page .role-block article:last-child,.case-page .complexity article:last-child{border-bottom:0}
+}
+</style>
+</head>
+<body class="case-page">
+<a class="case-skip" href="#main-content">Skip to content</a>
+<header class="case-nav">
+  <a class="case-brand" href="../index.html" aria-label="Back to Laxminarayana Avula portfolio">LA<span>.</span></a>
+  <nav aria-label="Primary navigation"><a href="../index.html#work">Work</a><a href="../index.html#about">About</a><a href="../index.html#contact">Contact</a></nav>
+  <span class="case-index">01 / ENQUIRE</span>
+</header>
+<main id="main-content">
+
+<section class="case-hero">
+  <div class="case-wrap">
+    <div class="case-hero-grid">
+      <div>
+        <div class="case-kicker">AI SEARCH · CONVERSATIONAL AI · KNOWLEDGE DISCOVERY</div>
+        <h1>Enquire</h1>
+        <p class="lead">Designing an AI search experience around how people <strong>ask, understand, verify and continue</strong>—not just how they type a query.</p>
+        <p class="eyebrow-note">0→1 AI product design engagement · 2024</p>
+      </div>
+      <dl class="case-meta">
+        <div><dt>Role</dt><dd>Senior UX/UI Designer</dd></div>
+        <div><dt>Engagement</dt><dd>Fixed-term AI product launch</dd></div>
+        <div><dt>Scope</dt><dd>0→1 product design</dd></div>
+        <div><dt>Focus</dt><dd>Search · conversation · AI interaction</dd></div>
+        <div><dt>Collaboration</dt><dd>Product · Engineering · Enterprise stakeholders</dd></div>
+        <div><dt>Delivery</dt><dd>Concept → high fidelity → handoff</dd></div>
+      </dl>
+    </div>
+    <div class="case-hero-visual"><img src="../assets/enquire/enquire-home.png" alt="Authentic Enquire product homepage shown inside a laptop mockup"></div>
+
+    <div class="role-block" aria-label="Role and scope">
+      <article><b>My role</b><p>Owned UX/UI design across the product experience, from structure and interaction patterns through high-fidelity delivery.</p></article>
+      <article><b>Product focus</b><p>AI-powered search, conversational knowledge discovery, source visibility, voice and multilingual input.</p></article>
+      <article><b>Collaboration</b><p>Worked with product, engineering and enterprise stakeholders to shape a coherent 0→1 experience.</p></article>
+      <article><b>Design responsibility</b><p>IA, user flows, AI interaction, responsive UX, design system thinking, handoff and design QA.</p></article>
+    </div>
+    <p class="role-note">The case study uses authentic Enquire product screens. No fabricated user counts, quotes or business metrics are presented.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="case-intro"><span class="num">01</span><h2>The product question</h2><p>Search was built around keywords and destinations. Enquire needed to support people who ask complete questions, expect synthesized answers, want evidence and continue investigating without restarting.</p></div>
+    <div class="thesis" style="margin-top:70px">
+      <h2>Search finds information.<br><em>Enquire needed to help people understand it.</em></h2>
+      <div class="body"><p>The design challenge was not simply to place AI above a results page. It was to make a new product model understandable: ask naturally, receive a useful response, inspect its evidence and continue from the same context.</p><p><strong>How might we make knowledge discovery feel as natural as a conversation—while keeping the answer understandable, verifiable and controllable?</strong></p></div>
+    </div>
+    <div class="evidence-strip"><article><b>01 · Ask</b><p>Natural language instead of keyword syntax.</p></article><article><b>02 · Understand</b><p>Make the synthesized answer primary.</p></article><article><b>03 · Verify</b><p>Keep evidence and provenance visible.</p></article><article><b>04 · Continue</b><p>Preserve context for the next question.</p></article></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">02</span><h2>What made the problem hard</h2><p>Enquire combined search, conversational AI, document intelligence, source visibility, voice and multilingual interaction. The product challenge was making those capabilities feel like one coherent experience.</p></div>
+    <div class="complexity">
+      <article><span>01</span><h3>Intent</h3><p>Understand questions that are richer than keywords.</p></article>
+      <article><span>02</span><h3>Answer</h3><p>Make useful synthesis the primary result.</p></article>
+      <article><span>03</span><h3>Evidence</h3><p>Let people inspect where information comes from.</p></article>
+      <article><span>04</span><h3>Continuity</h3><p>Carry context into follow-up questions.</p></article>
+      <article><span>05</span><h3>Modes</h3><p>Support voice and language without fragmenting the mental model.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">03</span><h2>Discovery: evidence into decisions</h2><p>The design work started by understanding the product problem from multiple angles: stakeholder needs, knowledge-discovery behavior, AI interaction patterns and implementation constraints.</p></div>
+    <div class="proof-grid">
+      <article><b>Stakeholder input</b><h3>What does the product need to make possible?</h3><p>Clarify the value proposition, priority capabilities and the experience expected from a new AI product.</p></article>
+      <article><b>Knowledge discovery</b><h3>What must remain understandable?</h3><p>Keep the relationship between question, answer, evidence and next step legible.</p></article>
+      <article><b>AI interaction</b><h3>Where can AI become ambiguous?</h3><p>Design around intent, response, uncertainty, evidence, feedback and continuation—not only the chat surface.</p></article>
+    </div>
+    <div class="matrix">
+      <div class="matrix-row"><b>Need</b><b>Design implication</b><span>Make the synthesized answer the primary information layer.</span></div>
+      <div class="matrix-row"><b>Trust</b><b>Design implication</b><span>Keep source context close to the information it supports.</span></div>
+      <div class="matrix-row"><b>Continuity</b><b>Design implication</b><span>Preserve conversation context instead of restarting the task.</span></div>
+      <div class="matrix-row"><b>Implementation</b><b>Design implication</b><span>Use reusable states and predictable patterns that engineering can carry into production.</span></div>
+    </div>
+    <p class="evidence-note">This case study intentionally distinguishes design reasoning from verified research statistics: no participant counts, quotes or quantitative findings are invented.</p>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">04</span><h2>People, jobs & intent</h2><p>Rather than relying on demographic personas, the experience was structured around the tasks people need an AI knowledge product to support.</p></div>
+    <div class="archetypes">
+      <article class="archetype"><span class="tag">TASK 01</span><h3>Find</h3><p>Locate useful information quickly without learning a complex query language.</p></article>
+      <article class="archetype"><span class="tag">TASK 02</span><h3>Understand</h3><p>Turn multiple pieces of information into an answer that can be read and acted on.</p></article>
+      <article class="archetype"><span class="tag">TASK 03</span><h3>Investigate</h3><p>Ask a follow-up, inspect evidence and continue the same line of inquiry.</p></article>
+    </div>
+    <div class="callout"><p><strong>Design around the job, not the interface.</strong> The user should not have to understand how the AI system works in order to understand how to use the product.</p><small>Design principle</small></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">05</span><h2>Product principles</h2><p>Five principles became the bridge between the product problem and the interface decisions.</p></div>
+    <div class="flow">
+      <article class="flow-step"><span class="index">01</span><h3>ASK</h3><p>Let people communicate naturally.</p></article>
+      <article class="flow-step"><span class="index">02</span><h3>UNDERSTAND</h3><p>Interpret intent before forcing navigation.</p></article>
+      <article class="flow-step"><span class="index">03</span><h3>ANSWER</h3><p>Put useful synthesis first.</p></article>
+      <article class="flow-step"><span class="index">04</span><h3>VERIFY</h3><p>Keep evidence visible.</p></article>
+      <article class="flow-step"><span class="index">05</span><h3>CONTINUE</h3><p>Preserve the investigation.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">06</span><h2>Key design decisions</h2><p>This is where the product thinking becomes visible: each major interaction was shaped around a specific problem, a design choice and a consequence for the interface.</p></div>
+    <div class="decision-list">
+      <article class="decision-card"><span class="label">Decision 01</span><h3>Answer first</h3><p><strong>Problem:</strong> A traditional results page makes users scan and assemble the answer themselves.<br><span class="tradeoff"><strong>Trade-off:</strong> Reduce the prominence of raw result density to increase comprehension of the synthesized response.</span><span class="consequence"><strong>UI consequence:</strong> The answer becomes the primary information layer, with navigation supporting it.</span></p></article>
+      <article class="decision-card"><span class="label">Decision 02</span><h3>Evidence stays close</h3><p><strong>Problem:</strong> AI output becomes difficult to verify when sources are separated from the claim.<br><span class="tradeoff"><strong>Trade-off:</strong> Preserve reading flow without hiding provenance.</span><span class="consequence"><strong>UI consequence:</strong> Source context remains part of the response experience.</span></p></article>
+      <article class="decision-card"><span class="label">Decision 03</span><h3>Follow-up remains contextual</h3><p><strong>Problem:</strong> Restarting a query destroys the value of conversational exploration.<br><span class="tradeoff"><strong>Trade-off:</strong> Keep context visible without turning the experience into a conventional chat transcript.</span><span class="consequence"><strong>UI consequence:</strong> The next question builds on the previous turn.</span></p></article>
+      <article class="decision-card"><span class="label">Decision 04</span><h3>Voice is another input</h3><p><strong>Problem:</strong> A separate voice experience creates a second mental model.<br><span class="tradeoff"><strong>Trade-off:</strong> Add natural input without creating another product path.</span><span class="consequence"><strong>UI consequence:</strong> Voice enters the same information architecture as text.</span></p></article>
+      <article class="decision-card"><span class="label">Decision 05</span><h3>Language changes input, not IA</h3><p><strong>Problem:</strong> Multilingual experiences can become fragmented when language is treated as a separate path.<br><span class="tradeoff"><strong>Trade-off:</strong> Adapt communication while keeping the task model stable.</span><span class="consequence"><strong>UI consequence:</strong> The same product logic survives across languages.</span></p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">07</span><h2>Information architecture</h2><p>Multiple AI capabilities become one predictable knowledge-discovery journey.</p></div>
+    <div class="flow">
+      <article class="flow-step"><span class="index">01</span><h3>ENTRY</h3><p>Search · prompt · voice</p></article>
+      <article class="flow-step"><span class="index">02</span><h3>INTENT</h3><p>Understand the question</p></article>
+      <article class="flow-step"><span class="index">03</span><h3>ANSWER</h3><p>Synthesize useful output</p></article>
+      <article class="flow-step"><span class="index">04</span><h3>EVIDENCE</h3><p>Sources · citations</p></article>
+      <article class="flow-step"><span class="index">05</span><h3>CONTINUE</h3><p>Follow-up · history</p></article>
+    </div>
+    <div class="split" style="margin-top:70px"><h2>One mental model.<br><span style="color:#7e8a90">Multiple ways to enter.</span></h2><div class="copy"><p><strong>Separate answer from evidence.</strong> Users should not need to decode the response to understand its provenance.</p><p><strong>Preserve context.</strong> A follow-up is a continuation of the investigation, not a new session.</p><p><strong>Keep modes additive.</strong> Voice and multilingual input expand communication without changing the underlying task model.</p></div></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">08</span><h2>User flows</h2><p>The flow model keeps search, conversation, voice and multilingual input inside one continuous journey.</p></div>
+    <div class="flow">
+      <article class="flow-step"><span class="index">01</span><h3>INPUT</h3><p>Question · voice · language</p></article>
+      <article class="flow-step"><span class="index">02</span><h3>INTERPRET</h3><p>Query → intent</p></article>
+      <article class="flow-step"><span class="index">03</span><h3>RESPOND</h3><p>AI answer</p></article>
+      <article class="flow-step"><span class="index">04</span><h3>VERIFY</h3><p>Sources · evidence</p></article>
+      <article class="flow-step"><span class="index">05</span><h3>CONTINUE</h3><p>Follow-up · history</p></article>
+    </div>
+    <div class="evidence-strip" style="margin-top:48px"><article><b>Search → answer</b><p>Question → intent → response → evidence → follow-up.</p></article><article><b>Voice → answer</b><p>Natural input → recognition → response → continue.</p></article><article><b>Language → answer</b><p>Input language → response language → same mental model.</p></article><article><b>Document → answer</b><p>Source → retrieval → response → evidence.</p></article></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">09</span><h2>Wireframes: hierarchy before visual language</h2><p>Low-fidelity work isolated the interaction decisions before branding, color and visual polish could influence the judgment.</p></div>
+    <div class="wireframe-grid">
+      <article class="wireframe"><span class="wf-label">01 · ENTRY</span><h3>Ask naturally</h3><div class="wf-ui"><div class="wf-line short"></div><div class="wf-box"></div><div class="wf-line long"></div><div class="wf-accent"></div></div></article>
+      <article class="wireframe"><span class="wf-label">02 · ANSWER</span><h3>Make the answer primary</h3><div class="wf-ui"><div class="wf-line short"></div><div class="wf-box"></div><div class="wf-box"></div><div class="wf-line"></div></div></article>
+      <article class="wireframe"><span class="wf-label">03 · CONTINUE</span><h3>Keep context alive</h3><div class="wf-ui"><div class="wf-line"></div><div class="wf-box"></div><div class="wf-accent"></div><div class="wf-line short"></div></div></article>
+    </div>
+    <div class="callout"><p>Strip the interface down until the hierarchy is undeniable: <strong>answer before navigation, evidence near claims, follow-up in context.</strong></p><small>Wireframe principle</small></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">10</span><h2>High-fidelity product</h2><p>High fidelity translated the interaction model into Enquire's visual language. These screens are authentic product work, not concept UI.</p></div>
+    <figure class="image-stage"><img src="../assets/enquire/enquire-home.png" alt="Authentic Enquire homepage and search entry experience"><figcaption><span>01 · Entry experience</span><span>Ask naturally</span></figcaption></figure>
+    <div class="image-pair"><figure class="image-card"><img src="../assets/enquire/enquire-responsive.png" alt="Authentic Enquire responsive search experience"><figcaption>02 · Responsive search</figcaption></figure><figure class="image-card"><img src="../assets/enquire/enquire-knowledge.png" alt="Authentic Enquire knowledge discovery experience"><figcaption>03 · Knowledge discovery</figcaption></figure></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">11</span><h2>Screen anatomy: why the interface works</h2><p>The design should make the relationship between product logic and UI visible—not just display a polished screen.</p></div>
+    <div class="anatomy">
+      <div class="anatomy-visual"><img src="../assets/enquire/enquire-knowledge.png" alt="Authentic Enquire knowledge discovery screen used for interaction anatomy"></div>
+      <div class="anatomy-list">
+        <article><b>01 · Query</b><span>The user's intent remains visible so the response can be understood in context.</span></article>
+        <article><b>02 · Answer</b><span>The synthesized response becomes the primary information layer rather than an accessory to links.</span></article>
+        <article><b>03 · Evidence</b><span>Source context stays close enough to support verification without interrupting comprehension.</span></article>
+        <article><b>04 · Continuation</b><span>The interaction leaves room for the next question instead of ending at the answer.</span></article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">12</span><h2>Natural communication: voice + multilingual</h2><p>Voice and language were treated as alternate ways to communicate intent—not as separate products.</p></div>
+    <div class="image-pair"><figure class="image-card"><img src="../assets/enquire/enquire-multilingual.png" alt="Authentic Enquire multilingual search experience"><figcaption>04 · Multilingual search</figcaption></figure><figure class="image-card"><img src="../assets/enquire/enquire-voice.png" alt="Authentic Enquire voice search experience"><figcaption>05 · Voice search</figcaption></figure></div>
+    <div class="split" style="margin-top:65px"><h2>Input adapts to the person.<br><span style="color:#7e8a90">The mental model stays stable.</span></h2><div class="copy"><p>The language selector, voice affordance and search field are alternate entry points into the same product model.</p><p>This reduces cognitive switching: the user changes how they communicate, not what they have to learn about the product.</p></div></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">13</span><h2>Trust, privacy & product meaning</h2><p>AI search is not only a speed problem. The interface also has to communicate what the product values and what the user can understand or control.</p></div>
+    <figure class="image-stage"><img src="../assets/enquire/enquire-privacy.png" alt="Authentic Enquire privacy-focused product experience"><figcaption><span>06 · Privacy proposition</span><span>Trust as part of the product</span></figcaption></figure>
+    <div class="split" style="margin-top:65px"><h2>Trust is not a footer.<br><span style="color:#7e8a90">It is an interaction requirement.</span></h2><div class="copy"><p>The product communicates a privacy position alongside the search experience. That makes trust part of the overall product meaning rather than supporting copy added after the interface.</p><p>Transparency, predictable states and evidence reinforce the same goal: make AI useful without making it opaque.</p></div></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">14</span><h2>AI interaction design</h2><p>Enquire required more than a chat interface. The system had to manage intent, response, evidence, continuity and recovery.</p></div>
+    <div class="flow"><article class="flow-step"><span class="index">01</span><h3>INPUT</h3><p>Question · voice · language</p></article><article class="flow-step"><span class="index">02</span><h3>INTENT</h3><p>Interpret meaning</p></article><article class="flow-step"><span class="index">03</span><h3>RESPONSE</h3><p>Answer first</p></article><article class="flow-step"><span class="index">04</span><h3>EVIDENCE</h3><p>Make intelligence inspectable</p></article><article class="flow-step"><span class="index">05</span><h3>FOLLOW-UP</h3><p>Continue with context</p></article></div>
+    <div class="decision-list">
+      <article class="decision"><span class="num">A</span><h3>Design uncertainty</h3><p>Loading, waiting, incomplete or unsuccessful states need to communicate what the system is doing rather than leaving people guessing.</p></article>
+      <article class="decision"><span class="num">B</span><h3>Design recovery</h3><p>When the expected answer is unavailable, the experience should guide the next useful action rather than simply fail.</p></article>
+      <article class="decision"><span class="num">C</span><h3>Design feedback</h3><p>Feedback becomes part of the AI interaction loop, giving people a clear way to communicate whether the response was useful.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">15</span><h2>Conversation as a product surface</h2><p>The conversational layer extends search into a continuous investigation rather than a sequence of disconnected prompts.</p></div>
+    <figure class="image-stage"><img src="../assets/enquire/enquire-conversation.png" alt="Authentic Enquire conversational knowledge discovery experience"><figcaption><span>07 · Conversational knowledge discovery</span><span>Ask → understand → continue</span></figcaption></figure>
+    <div class="callout"><p><strong>Good conversational UX is not a chat box.</strong> It is a system for managing intent, context, response, evidence, uncertainty and the next action.</p><small>Human–AI interaction principle</small></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">16</span><h2>System thinking & delivery</h2><p>The experience had to survive implementation—not just look coherent inside a design file.</p></div>
+    <div class="system"><article><span class="index">01</span><h3>Foundations</h3><p>Typography, spacing, color, hierarchy and responsive rules.</p></article><article><span class="index">02</span><h3>Components</h3><p>Reusable inputs, buttons, search states, navigation and content patterns.</p></article><article><span class="index">03</span><h3>AI states</h3><p>Loading, waiting, response, feedback, uncertainty and continuation.</p></article><article><span class="index">04</span><h3>Handoff</h3><p>Implementation-ready specifications, responsive behavior and design QA.</p></article></div>
+    <div class="validation"><article><b>Accessibility</b><p>Hierarchy, contrast, focus/state thinking and input flexibility considered as part of the interaction model.</p></article><article><b>Responsive</b><p>The same information architecture remains understandable across viewport sizes and input contexts.</p></article><article><b>Engineering</b><p>Reusable patterns and implementation-oriented specifications support collaboration with engineering.</p></article><article><b>QA</b><p>The intended experience is something to preserve through implementation, not simply hand off.</p></article></div>
+    <div class="callout"><p><strong>Figma → components & states → responsive implementation → engineering review → design QA.</strong> The handoff is successful when the intended experience survives implementation.</p><small>Design-to-delivery model</small></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">17</span><h2>Validation & iteration</h2><p>Validation was centered on the moments where AI can be misunderstood: comprehension, evidence, continuity and mode switching. The record available for this portfolio does not include participant counts or quantitative results, so no such numbers are claimed here.</p></div>
+    <div class="validation-grid">
+      <article><b>01 · Answer clarity</b><h3>Can the person understand the response?</h3><p>Check whether hierarchy and response structure make the useful information immediately legible.</p><p class="iteration"><strong>Iteration lens:</strong> simplify hierarchy before adding more interface.</p></article>
+      <article><b>02 · Evidence</b><h3>Can the person verify the answer?</h3><p>Check whether source visibility and provenance are understandable without breaking reading flow.</p><p class="iteration"><strong>Iteration lens:</strong> keep evidence close to the claim it supports.</p></article>
+      <article><b>03 · Continuity</b><h3>Can the person continue without restarting?</h3><p>Check whether the next question clearly belongs to the previous investigation.</p><p class="iteration"><strong>Iteration lens:</strong> preserve context instead of creating another mode.</p></article>
+      <article><b>04 · Mode switching</b><h3>Can the person change input naturally?</h3><p>Check whether text, voice and language choices feel like variations of one product.</p><p class="iteration"><strong>Iteration lens:</strong> change input, not the mental model.</p></article>
+    </div>
+    <div class="callout"><p>I would rather validate the highest-risk misunderstanding than polish a low-risk screen. The process is driven by product risk, not by the number of artifacts produced.</p><small>Validation principle</small></div>
+  </div>
+</section>
+
+<section class="case-section">
+  <div class="case-wrap">
+    <div class="section-title"><span class="num">18</span><h2>Contribution & outcome</h2><p>The work turned a collection of AI capabilities into a coherent product experience that could be understood, explored and extended.</p></div>
+    <div class="ownership">
+      <h3>What I brought to the product.</h3>
+      <div class="ownership-list">
+        <article><b>Product UX strategy</b><span>Translated a broad AI capability set into a clear experience model.</span></article>
+        <article><b>Information architecture</b><span>Structured the relationship between entry, intent, answer, evidence and continuation.</span></article>
+        <article><b>AI interaction design</b><span>Defined patterns for response, evidence, uncertainty, recovery, feedback and follow-up.</span></article>
+        <article><b>Experience design</b><span>Designed search, conversation, voice, multilingual and responsive experiences using authentic product UI.</span></article>
+        <article><b>Design-to-delivery</b><span>Created reusable patterns and implementation-oriented handoff, with design QA as part of delivery.</span></article>
+      </div>
+    </div>
+    <div class="before-after">
+      <article><b>Starting model</b><h3>Search → results → open sources → repeat query</h3><p>A conventional search mental model optimized around retrieval and navigation.</p></article>
+      <article><b>Designed model</b><h3>Ask → understand → answer → verify → continue</h3><p>A knowledge-discovery model designed around questions, evidence and contextual exploration.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="case-section" style="padding-top:35px">
+  <div class="case-wrap"><figure class="image-stage"><img src="../assets/enquire/enquire-faq-footer.png" alt="Authentic Enquire supporting product surface showing FAQ and footer content"><figcaption><span>19 · Supporting product surface</span><span>Content · trust · continuity</span></figcaption></figure></div>
+</section>
+
+<section class="closing">
+  <div class="case-wrap">
+    <div class="case-kicker">DESIGN REFLECTION</div>
+    <h2>I don't design screens in isolation.<br><em>I design the system of decisions behind them.</em></h2>
+    <p>For Enquire, that meant turning a complex AI capability set into an experience people could ask, understand, verify and continue using. The visible interface was the result; the deeper design work was the product logic connecting intent, response, evidence and action.</p>
+    <div class="closing-proof">
+      <article><b>Product thinking</b><p>Translate ambiguity into a clear product model.</p></article>
+      <article><b>Design craft</b><p>Make complex interaction legible through hierarchy and systems.</p></article>
+      <article><b>Delivery mindset</b><p>Carry the intended experience from Figma into implementation.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="next-project"><div class="case-wrap"><div class="small">NEXT / SELECTED WORK</div><a href="../index.html#work"><h2>Explore the rest of the product work ↗</h2></a></div></section>
+</main>
+<footer class="case-footer"><span>© 2026 Laxminarayana Avula</span><a href="../index.html">← Back to portfolio</a></footer>
+</body>
+</html>

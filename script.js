@@ -1,0 +1,1 @@
+(() => {const h=document.querySelector("[data-header]");let y=scrollY;addEventListener("scroll",()=>{const n=scrollY;if(n>y&&n>120)h.classList.add("hide");else h.classList.remove("hide");y=n},{passive:true})})();
